@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition">
+  <DataSet Name="">
+    <Query>
+      <DataSourceReference>fe_mtp1</DataSourceReference>
+      <DataSetParameters>
+        <DataSetParameter Name="@SOPNUMBE">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:UserDefined>true</rd:UserDefined>
+          <rd:DbType>String</rd:DbType>
+        </DataSetParameter>
+      </DataSetParameters>
+      <CommandText>SELECT        DOCSTATUS, SOPTYPE, SOPNUMBE, DOCDATE, GLPOSTDT, DUEDATE, PYMTRMID, LOCNCODE, CUSTNMBR, CUSTNAME, CSTPONBR, PRBTADCD, 
+                         PRSTADCD, ShipToName, ADDRESS1, ADDRESS2, ADDRESS3, CITY, STATE, ZIPCODE, CCode, COUNTRY, PHNUMBR1, PHNUMBR2, PHONE3, FAXNUMBR, 
+                         SHIPMTHD, SUBTOTAL, ORSUBTOT, OREMSUBT, FRTAMNT, ORFRTAMT, MISCAMNT, ORMISCAMT, TXRGNNUM, TAXAMNT, ORTAXAMT, DOCAMNT, 
+                         AMOUNT_LETTERS, ORDOCAMT, CURNCYID, RATETPID, EXGTBLID, XCHGRATE, USERDEF1, USERDEF2, USRTAB01, FORMADEPAGOCONCATENADO, 
+                         TXRGNNUMCUST, LNITMSEQ, ORDEN, CMPNTSEQ, ITEMNMBR, ITEMDESC, UOFM, LOCNCODE_SOPDETAIL, UNITPRCE, ORUNTPRC, XTNDPRCE, 
+                         OXTNDPRC, QUANTITY, SERLTNUM, SERLTQTY, BIN, LOTATRB1, LOTATRB2, LOTATRB3, LOTATRB4, LOTATRB5, ADRSCODE_INVOICE, 
+                         SHIPMTHD_INVOICE, CNTCPRSN_INVOICE, ADDRESS1_INVOICE, ADDRESS2_INVOICE, ADDRESS3_INVOICE, CCode_INVOICE, COUNTRY_INVOICE, 
+                         CITY_INVOICE, STATE_INVOICE, ZIP_INVOICE, PHONE1_INVOICE, PHONE2_INVOICE, PHONE3_INVOICE, FAX_INVOICE, ADRSCODE_SHIPMENT, 
+                         SHIPMTHD_SHIPMENT, CNTCPRSN_SHIPMENT, ADDRESS1_SHIPMENT, ADDRESS2_SHIPMENT, ADDRESS3_SHIPMENT, CCode_SHIPMENT, 
+                         COUNTRY_SHIPMENT, CITY_SHIPMENT, STATE_SHIPMENT, ZIP_SHIPMENT, PHONE1_SHIPMENT, PHONE2_SHIPMENT, PHONE3_SHIPMENT, 
+                         FAX_SHIPMENT, docid, fechaHoraEmision, regimenFiscal, rfcReceptor, nombreCliente, total, formaDePago, folioFiscal, noCertificadoCSD, version, selloCFD, 
+                         selloSAT, cadenaOriginalSAT, noCertificadoSAT, FechaTimbrado, addLeyenda, rutaYNomArchivo
+FROM            MTP1..TII_SOPINVOICE
+WHERE        (SOPNUMBE = @SOPNUMBE) AND (SOPTYPE = @SOPTYPE)</CommandText>
+    </Query>
+  </DataSet>
+</SharedDataSet>

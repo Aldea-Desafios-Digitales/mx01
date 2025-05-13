@@ -1,0 +1,7 @@
+--Para modificar el subjet del email reemplazar el texto: 'nuevo subject'	
+--Para modificar el cuerpo del email reemplazar el texto: 'nuevo texto'
+update cn00700 set 	CN_Letter_Text = 'nuevo texto', CN_Email_Subject = 'nuevo subject'
+where Letter_Type=3
+and LTRRPTNM = 'FACTURA_ELECTRONICA'
+
+	

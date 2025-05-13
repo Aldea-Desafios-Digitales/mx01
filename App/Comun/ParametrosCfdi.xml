@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<listaParametros>
+  <servidor>TP-GP\GPTP</servidor>
+  <seguridadIntegrada>1</seguridadIntegrada>
+  <usuariosql>sa</usuariosql>
+  <passwordsql>-</passwordsql>
+	<compannia bd="GPEX">
+    <testQR>1</testQR>
+    <URLArchivoXSD>na</URLArchivoXSD>
+		<URLArchivoPagosXSD>na</URLArchivoPagosXSD>
+		<URLArchivoXSLT>na</URLArchivoXSLT>
+		<URLConsulta>na</URLConsulta>
+		<PAC>
+			<urlWebService>na</urlWebService>
+		</PAC>
+		<reporteador>SSRS</reporteador>
+		<reporteExtensiones>
+			<PrefijoFacturaExporta>E</PrefijoFacturaExporta >
+			<FacturaExporta>Gral_exp</FacturaExporta>
+			<Factura>Gral</Factura>
+			<Cobro>.rdl</Cobro>
+			<Traslado>.rdl</Traslado>
+		</reporteExtensiones>
+		<rutaReporteCrystal tipo="default">
+			<Ruta>na</Ruta>
+			<Margenes>
+				<bottomMargin>0</bottomMargin>
+				<topMargin>0</topMargin>
+				<leftMargin>0</leftMargin>
+				<rightMargin>0</rightMargin>
+			</Margenes>
+			<Parametro>
+				<Nombre>Desde Numero</Nombre>
+				<Tipo>string</Tipo>
+			</Parametro>
+			<Parametro>
+				<Nombre>Hasta Numero</Nombre>
+				<Tipo>string</Tipo>
+			</Parametro>
+			<Parametro>
+				<Nombre>sTabla</Nombre>
+				<Tipo>string</Tipo>
+			</Parametro>
+			<Parametro>
+				<Nombre>Comprobante</Nombre>
+				<Tipo>int</Tipo>
+			</Parametro>
+			<imprime>0</imprime>
+			<nombreImpresora>na</nombreImpresora>
+		</rutaReporteCrystal>
+		<ReporteSSRS tipo = "default">
+			<Ruta>/GPEX/FACTURA/FE_Factura_</Ruta>
+			<SSRSServer>http://testappgpx1.centralus.cloudapp.azure.com/ReportServer_DYNGP2018</SSRSServer>
+			<Parametro>
+				<Nombre>TIPO_FACTURA</Nombre>
+				<Tipo>integer</Tipo>
+			</Parametro>
+			<Parametro>
+				<Nombre>NRO_FACTURA</Nombre>
+				<Tipo>string</Tipo>
+			</Parametro>
+			<Parametro>
+				<Nombre>BASE</Nombre>
+				<Tipo>string</Tipo>
+			</Parametro>
+		</ReporteSSRS>
+		<emite>0</emite>
+		<anula>0</anula>
+		<imprime>1</imprime>
+		<publica>0</publica>
+		<envia>1</envia>
+		<zip>0</zip>
+		<emailSetup>
+			<smtp>smtp.gmail.com</smtp>
+			<puerto>587</puerto>
+			<cuenta>na</cuenta>
+			<usuario>na</usuario>
+			<clave/>
+			<ssl>true</ssl>
+			<replyto>na</replyto>
+			<carta>FACTURA_ELECTRONICA</carta>
+			<adjuntoEmite>na</adjuntoEmite>
+			<adjuntoImprime>pdf</adjuntoImprime>
+		</emailSetup>
+	</compannia>
+</listaParametros>
+

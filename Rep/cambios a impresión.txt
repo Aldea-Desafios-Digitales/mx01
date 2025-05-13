@@ -1,0 +1,31 @@
+Representación impresa CFDI:
+-----------------------------------------------
+TipoDeComprobante
+Método de pago		=First(Fields!metodoDePago.Value, "SOPINVOICE")+ " " + First(Fields!mtdpg_descripcion.Value, "SOPINVOICE")
+Forma de pago		=First(Fields!formaDePago.Value, "SOPINVOICE")+" "+First(Fields!frpg_descripcion.Value, "SOPINVOICE")
+			{IMPRIME_COMPROBANTE.formaDePago}+ " " +{IMPRIME_COMPROBANTE.frpg_descripcion}
+Descuento
+Lugar de expedición	codigoPostal
+Régimen fiscal		=First(Fields!regimenFiscal.Value, "SOPINVOICE") + " "+First(Fields!rgfs_descripcion.Value, "SOPINVOICE") 
+			{IMPRIME_COMPROBANTE.regimenFiscal}+ " " +{IMPRIME_COMPROBANTE.rgfs_descripcion}
+UsoCFDI			=First(Fields!usoCfdi.Value, "SOPINVOICE")+ " " +First(Fields!uscf_descripcion.Value, "SOPINVOICE")
+			{IMPRIME_COMPROBANTE.usoCfdi}+ " " +{IMPRIME_COMPROBANTE.uscf_descripcion}
+Código de artículo sat  ClaveProdServ
+Unidad de medida	=Fields!UOFM.Value + " " + Fields!UOFMsat_descripcion.Value
+rfc del pac		RfcPAC
+leyenda			Leyenda
+
+Tipo relación		=First(Fields!TipoRelacion.Value, "SOPINVOICE")+ " " +First(Fields!tprl_descripcion.Value, "SOPINVOICE")
+Nodo Relacionados	="UUID: " + First(Fields!UUIDrelacionado.Value, "SOPINVOICE")
+
+
+CFDI PAGOS
+---------------------------------------
+TipoCambioP
+NumOperacion
+RfcEmisorCtaOrd
+NomBancoOrdExt
+CtaOrdenante
+RfcEmisorCtaBen
+CtaBeneficiario
+

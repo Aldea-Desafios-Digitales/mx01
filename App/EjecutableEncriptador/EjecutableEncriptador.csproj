@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{355BFAC1-5E11-452B-ACD1-E29D96F11B12}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EjecutableEncriptador</RootNamespace>
+    <AssemblyName>EjecutableEncriptador</AssemblyName>
+    <TargetZone>LocalIntranet</TargetZone>
+    <GenerateManifests>false</GenerateManifests>
+    <StartupObject>EjecutableEncriptador.Program</StartupObject>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <PublishUrl>publicar\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\WINDOWS\assembly\GAC_MSIL\System.Web.Services\2.0.0.0__b03f5f7f11d50a3a\System.Web.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BLL\cfdEmailWorker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BLL\cfdFacturaPdfWorker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BLL\cfdFacturaXmlWorker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BLL\cfdLogFacturaXML.cs" />
+    <Compile Include="BLL\cfdReglasEmail.cs" />
+    <Compile Include="BLL\cfdReglasFacturaXml.cs" />
+    <Compile Include="BLL\test.cs" />
+    <Compile Include="BLL\vwCfdClienteDireccionesCorreo.cs" />
+    <Compile Include="BLL\vwCfdCompannias.cs" />
+    <Compile Include="BLL\vwCfdiDatosDelXml.cs" />
+    <Compile Include="BLL\vwCfdiDatosDelXml_wrapper.cs" />
+    <Compile Include="BLL\vwCfdIdDocumentos.cs" />
+    <Compile Include="BLL\vwCfdiPagosSimultaneos.cs" />
+    <Compile Include="BLL\vwCfdiTransaccionesDeVenta.cs" />
+    <Compile Include="BLL\vwCfdTransaccionesDeVenta.cs" />
+    <Compile Include="ConexionDB.cs" />
+    <Compile Include="DAL\_cfdLogFacturaXML.cs" />
+    <Compile Include="BLL\vwCfdCartasReclamacionDeuda.cs" />
+    <Compile Include="winformGeneraFE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="winformGeneraFE.Designer.cs">
+      <DependentUpon>winformGeneraFE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="winformGeneraFE.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>winformGeneraFE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <BaseApplicationManifest Include="Properties\app.manifest" />
+    <None Include="app.config" />
+    <Compile Include="BLL\vwCfdiPagosSimultaneos_wrapper.cs" />
+    <None Include="Properties\DataSources\vwCfdTransaccionesDeVenta.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\_DevLibrary\BarCodeInterface\BarCodeInterface.csproj">
+      <Project>{4eb082a0-76a6-4a90-a40c-c39684570cd4}</Project>
+      <Name>BarCodeInterface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\_DevTools\MyGeneration.dOOdads\MyGeneration.dOOdads_2005.csproj">
+      <Project>{8666C149-F8D1-47CE-B5E2-BEE0BC844A9A}</Project>
+      <Name>MyGeneration.dOOdads_2005</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Comun\Comun.csproj">
+      <Project>{d43004bd-e235-41be-b272-a05fc4fb9a96}</Project>
+      <Name>Comun</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EMailManejador\EMailManejador.csproj">
+      <Project>{83B4098D-4F8A-41E5-9411-6E56A9AD24BF}</Project>
+      <Name>EMailManejador</Name>
+      <Private>True</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\Encriptador\Encriptador.csproj">
+      <Project>{0969f8b3-edce-46aa-a7b2-01a10b99d7ef}</Project>
+      <Name>Encriptador</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MaquinaDeEstados\MaquinaDeEstados.csproj">
+      <Project>{3325D053-41AA-48A1-9166-11DC6AFEA8D7}</Project>
+      <Name>MaquinaDeEstados</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Reporteador\Reporteador.csproj">
+      <Project>{B2942D0B-1AF0-434C-A9B5-F090D8361E84}</Project>
+      <Name>Reporteador</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\generapdf.jpg" />
+    <None Include="Recursos\emailGreen.jpg" />
+    <None Include="Recursos\emailG.jpg" />
+    <Content Include="Recursos\process.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

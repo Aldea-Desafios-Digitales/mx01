@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition">
+  <DataSet Name="">
+    <Query>
+      <DataSourceReference>fe_mmser</DataSourceReference>
+      <DataSetParameters>
+        <DataSetParameter Name="@SOPNUMBE">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:UserDefined>true</rd:UserDefined>
+          <rd:DbType>String</rd:DbType>
+        </DataSetParameter>
+      </DataSetParameters>
+      <CommandText>SELECT * 
+FROM TII_SOPINVOICE
+WHERE SOPNUMBE = @SOPNUMBE AND SOPTYPE = @SOPTYPE</CommandText>
+    </Query>
+  </DataSet>
+</SharedDataSet>

@@ -1,0 +1,1 @@
+Agregar archivo xml smartlist y su respectivo script sql
